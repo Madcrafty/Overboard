@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class MenuShift : MonoBehaviour
 {
-    public int _pId;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int _pId = 0;
+    public Transform _panelIdOne, _panelIdTwo, _panelIdThree, _panelHolder;
+    public int _shiftSpeed;
+    private bool _canMove = true;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (_canMove ==  true)
+        {
+            if (_pId == 1)
+            {
+                _panelHolder.transform.position += _panelHolder.transform.up * Time.deltaTime * _shiftSpeed * -1;
+            }
+            else if (_pId == 2)
+            {
+                _panelHolder.transform.position += _panelHolder.transform.right * Time.deltaTime * _shiftSpeed;
+            }
+            else if (_pId == 3)
+            {
+                _panelHolder.transform.position += _panelHolder.transform.right * Time.deltaTime * _shiftSpeed * -1;
+            }
+        }
         
     }
     public void NewMenuPanel()
     {
-
+        _canMove = true;
     }
 }

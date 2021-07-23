@@ -25,12 +25,16 @@ public class ObjectMouseFollow : MonoBehaviour
 
     private void OnTriggerEnter(Collider _other)
     {
-        if (!_other.CompareTag("menuObj"))
+        Debug.Log("hit");
+        if (_other.CompareTag("menuObj"))
         {
             _doPanelSwap.NewMenuPanel();
         }
         else
+        {
             _canMove = false;
+        }
+
     }
     private void OnTriggerExit(Collider _other)
     {
