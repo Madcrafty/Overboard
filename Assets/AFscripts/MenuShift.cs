@@ -1,11 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class speedChange : MonoBehaviour
+public class MenuShift : MonoBehaviour
 {
-    public float _newSpeed;
-    public ObjectMouseFollow _targetSpeed;
+    public int _pId;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +16,8 @@ public class speedChange : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    public void NewMenuPanel()
     {
-        _targetSpeed._movementSpeed = _newSpeed;
+
     }
 }

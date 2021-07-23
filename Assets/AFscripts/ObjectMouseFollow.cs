@@ -7,6 +7,7 @@ public class ObjectMouseFollow : MonoBehaviour
     public Transform _movingObj;
     public float _movementSpeed;
     public bool _canMove;
+    public MenuShift _doPanelSwap;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +23,16 @@ public class ObjectMouseFollow : MonoBehaviour
             _movingObj.transform.position = _movingObj.transform.position;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider _other)
     {
-        _canMove = false;
+        if (!_other.CompareTag("menuObj"))
+        {
+            _doPanelSwap.NewMenuPanel();
+        }
+        else
+            _canMove = false;
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider _other)
     {
         _canMove = true;
     }
