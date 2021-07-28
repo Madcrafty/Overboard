@@ -1,21 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
+    public PlayerInput _PI;
+    public float speed = 3f;
     private Vector3 _lastGroundedPosition;
     private Transform _spawnPoint;
     private Collider _collider;
     private RaycastHit _info;
+    private Vector3 rawInputMovement;
+    private Rigidbody _rigidbody;
+    private float airtime;
     // Start is called before the first frame update
-    
     void Start()
     {
         _collider = GetComponent<Collider>();
         _lastGroundedPosition = transform.position;
+        _rigidbody = GetComponent<Rigidbody>();
     }
-
+    public void OnMovement(InputAction.CallbackContext value)
+    {
+        Vector2 inputMovement = value.ReadValue<Vector2>();
+        rawInputMovement = new Vector3(inputMovement.x, 0, inputMovement.y);
+        transform.LookAt(transform.position + rawInputMovement);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +36,18 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded())
         {
+            if (airtime > 0)
+            {
+                airtime = 0;
+            }
             _lastGroundedPosition = transform.position;
+            _rigidbody.MovePosition(transform.position + (rawInputMovement * speed * Time.deltaTime));
+        }
+        else
+        {
+            //airtime += Time.deltaTime;
+            _rigidbody.MovePosition(transform.position + (rawInputMovement * speed * Time.deltaTime));
+            //_rigidbody.MovePosition(Vector3.down * 9.8f * airtime * Time.deltaTime);
         }
     }
     bool isGrounded()
