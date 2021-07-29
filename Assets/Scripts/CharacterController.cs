@@ -11,15 +11,21 @@ public class CharacterController : MonoBehaviour
     private Transform _spawnPoint;
     private Collider _collider;
     private RaycastHit _info;
+    private Ray _ray;
     private Vector3 rawInputMovement;
     private Rigidbody _rigidbody;
     private float airtime;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        //_ray = new Ray(transform.position,)
         _collider = GetComponent<Collider>();
         _lastGroundedPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
+    }
+    void Start()
+    {
+
     }
     public void OnMovement(InputAction.CallbackContext value)
     {
@@ -36,10 +42,10 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded())
         {
-            if (airtime > 0)
-            {
-                airtime = 0;
-            }
+            //if (airtime > 0)
+            //{
+            //    airtime = 0;
+            //}
             _lastGroundedPosition = transform.position;
             _rigidbody.MovePosition(transform.position + (rawInputMovement * speed * Time.deltaTime));
         }
@@ -52,8 +58,8 @@ public class CharacterController : MonoBehaviour
     }
     bool isGrounded()
     {
-        Physics.Raycast(transform.position, Vector3.down, out _info, 0.1f, LayerMask.GetMask("Default"));
-        if (_info.collider != null && _info.collider.name != name && _info.distance <= 0.1f)
+        Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, out _info, 0.2f, LayerMask.GetMask("Default"));
+        if (_info.collider != null && _info.collider.name != name)
         {
             return true;
         }
@@ -69,7 +75,8 @@ public class CharacterController : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position, 0.1f);
+        //Gizmos.DrawSphere(transform.position, 0.1f);
+        Gizmos.DrawLine(transform.position + Vector3.up * 0.1f, transform.position + Vector3.down * 0.2f);
         //Gizmos.DrawLine(transform.position, new Vector3()
     }
 }
