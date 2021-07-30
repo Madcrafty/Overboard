@@ -57,7 +57,7 @@ public class Pickup : MonoBehaviour
         _objectHeld.transform.SetParent(null);
         _objectHeld.transform.SetParent(transform);
         _objectHeld.transform.localPosition = Vector3.forward * 1.1f + Vector3.up * 0.75f;
-        _hold = !_hold;
+        _hold = true;
     }
     void Drop()
     {
@@ -71,7 +71,7 @@ public class Pickup : MonoBehaviour
             _objectHeld.GetComponent<Rigidbody>().isKinematic = false;
         }
         _objectHeld = null;
-        _hold = !_hold;
+        _hold = false;
     }
     void Throw()
     {
@@ -86,7 +86,13 @@ public class Pickup : MonoBehaviour
         }
         _objectHeld.GetComponent<Rigidbody>().AddForce(transform.forward * _ThrowPower, ForceMode.VelocityChange);
         _objectHeld = null;
-        _hold = !_hold;
+        _hold = false;
+    }
+    public void RemoveObject()
+    {
+        Destroy(_objectHeld);
+        _objectHeld = null;
+        _hold = false;
     }
     public GameObject GetHeldObject()
     {
