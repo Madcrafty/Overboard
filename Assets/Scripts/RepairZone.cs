@@ -12,8 +12,8 @@ public class RepairZone : MonoBehaviour
             if (other.GetComponent<Pickup>().GetHeldObject().name == SuppliesToFix.name)
             {
                 Debug.Log("repaired");
-            }
-            
+                Destroy(gameObject);
+            }         
         }
     }
 }
