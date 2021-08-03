@@ -12,6 +12,7 @@ public class Pickup : MonoBehaviour
     private Ray _ray;
     private bool _hold = false;
     private GameObject _objectHeld;
+    private Rigidbody _objectRB;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,19 +46,22 @@ public class Pickup : MonoBehaviour
     void Grab(GameObject Suplies)
     {
         _objectHeld = Suplies;
+        // Supply Crate checks
         if (_objectHeld.GetComponent<SupplyCrate>() != null && _objectHeld.GetComponent<SupplyCrate>().Contents != null)
         {
             //Grab(_objectHeld.GetComponent<SupplyCrate>().Contents);
             _objectHeld = Instantiate(_objectHeld.GetComponent<SupplyCrate>().Contents);
         }
+        // Rigidbody Checks
         if (_objectHeld.GetComponent<Rigidbody>() != null && _objectHeld.GetComponent<Rigidbody>().isKinematic == false)
         {
             _objectHeld.GetComponent<Rigidbody>().isKinematic = true;
         }
+        // transform stuff
         _objectHeld.transform.SetParent(null);
         _objectHeld.transform.SetParent(transform);
         _objectHeld.transform.localPosition = Vector3.forward * 1.1f + Vector3.up * 0.75f;
-        _hold = !_hold;
+        _hold = true;
     }
     void Drop()
     {
@@ -71,7 +75,7 @@ public class Pickup : MonoBehaviour
             _objectHeld.GetComponent<Rigidbody>().isKinematic = false;
         }
         _objectHeld = null;
-        _hold = !_hold;
+        _hold = false;
     }
     void Throw()
     {
@@ -86,7 +90,13 @@ public class Pickup : MonoBehaviour
         }
         _objectHeld.GetComponent<Rigidbody>().AddForce(transform.forward * _ThrowPower, ForceMode.VelocityChange);
         _objectHeld = null;
-        _hold = !_hold;
+        _hold = false;
+    }
+    public void RemoveObject()
+    {
+        Destroy(_objectHeld);
+        _objectHeld = null;
+        _hold = false;
     }
     public GameObject GetHeldObject()
     {
