@@ -9,7 +9,7 @@ public class RepairZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (other.GetComponent<Pickup>().GetHeldObject().name.Contains(SuppliesToFix.name))
+            if (other.GetComponent<Pickup>().GetHeldObject() != null && other.GetComponent<Pickup>().GetHeldObject().name.Contains(SuppliesToFix.name))
             {
                 other.GetComponent<Pickup>().RemoveObject();
                 Debug.Log("repaired");
