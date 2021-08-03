@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.Interactions;
 public class Pickup : MonoBehaviour
 {
     public PlayerInput _PI;
+    public float _grabRangeScale = 1f;
     public float _ThrowPower = 5;
     private RaycastHit _info;
     private Ray _ray;
@@ -22,7 +23,7 @@ public class Pickup : MonoBehaviour
     {
         if (value.performed)
         {
-            Physics.Raycast(transform.position + Vector3.up * 0.1f, transform.forward, out _info, 1f, LayerMask.GetMask("Default"));
+            Physics.Raycast(transform.position + Vector3.up * 0.1f, transform.forward, out _info, _grabRangeScale * transform.localScale.z, LayerMask.GetMask("Default"));
             if (_hold)
             {
                 if (value.interaction is TapInteraction)
@@ -104,6 +105,6 @@ public class Pickup : MonoBehaviour
     }
     public void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position + Vector3.up * 0.1f, transform.position + Vector3.up * 0.1f + transform.forward);
+        Gizmos.DrawLine(transform.position + Vector3.up * 0.1f, transform.position + Vector3.up * 0.1f + transform.forward * _grabRangeScale * transform.localScale.z);
     }
 }
