@@ -108,7 +108,19 @@ MonoBehaviour:
     m_ActionId: 5e4780ae-b2a9-437a-bc7c-2a72a8d96b41
     m_ActionName: PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3325530798880583791}
+        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
+        m_MethodName: OnPickup
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 28ff1bad-db5f-4750-860a-f8d7acc14280
     m_ActionName: PlayerControls/Pickup[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
@@ -129,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PI: {fileID: 116034940}
+  _grabRangeScale: 1
   _ThrowPower: 5
 --- !u!136 &5906226177315590500
 CapsuleCollider:
