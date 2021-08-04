@@ -14,11 +14,6 @@ public class Pickup : MonoBehaviour
     private bool _hold = false;
     private GameObject _objectHeld;
     private Rigidbody _objectRB;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     public void OnPickup(InputAction.CallbackContext value)
     {
         if (value.performed)
