@@ -28,7 +28,8 @@ public class ObjectMouseFollow : MonoBehaviour
         Debug.Log("hit");
         if (_other.CompareTag("menuObj"))
         {
-            _doPanelSwap.NewMenuPanel();
+            _doPanelSwap.BeginMenuMove();
+            Cursor.lockState =  CursorLockMode.Locked;
         }
         else
         {
@@ -38,6 +39,11 @@ public class ObjectMouseFollow : MonoBehaviour
     }
     private void OnTriggerExit(Collider _other)
     {
+        if (_other.CompareTag("menuObj"))
+        {
+            _doPanelSwap.StopMenuMove();
+            Cursor.lockState = CursorLockMode.None;
+        }
         _canMove = true;
     }
 }

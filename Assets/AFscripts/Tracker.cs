@@ -29,5 +29,6 @@ public class Tracker : MonoBehaviour
     public void FollowMouseAgain()
     {
         _unclicked = true;
+        _sendTo._pId = 0;
     }
 }
