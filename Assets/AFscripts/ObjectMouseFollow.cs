@@ -29,7 +29,7 @@ public class ObjectMouseFollow : MonoBehaviour
         if (_other.CompareTag("menuObj"))
         {
             _doPanelSwap.BeginMenuMove();
-            Cursor.lockState =  CursorLockMode.Locked;
+            
         }
         else
         {
@@ -42,7 +42,7 @@ public class ObjectMouseFollow : MonoBehaviour
         if (_other.CompareTag("menuObj"))
         {
             _doPanelSwap.StopMenuMove();
-            Cursor.lockState = CursorLockMode.None;
+            
         }
         _canMove = true;
     }
