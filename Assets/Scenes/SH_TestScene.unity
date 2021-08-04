@@ -11001,11 +11001,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.y
@@ -11017,7 +11017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -11031,6 +11031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairZone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3439304637103513954, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 3563026155770092968, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: SuppliesToFix
       value: 
@@ -11038,7 +11042,7 @@ PrefabInstance:
     - target: {fileID: 7779656340625330016, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: deea341d91fd2d84a81e3a3318a31d6e, type: 2}
+      objectReference: {fileID: 2100000, guid: a1032ec90d06d7d48b76315e69e07d91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
 --- !u!1 &604676162
@@ -13900,11 +13904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.y
@@ -13916,7 +13920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -13930,6 +13934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairZone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3439304637103513954, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 3563026155770092968, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: SuppliesToFix
       value: 
@@ -13937,7 +13945,7 @@ PrefabInstance:
     - target: {fileID: 7779656340625330016, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: deea341d91fd2d84a81e3a3318a31d6e, type: 2}
+      objectReference: {fileID: 2100000, guid: a1032ec90d06d7d48b76315e69e07d91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
 --- !u!1 &742080708
@@ -40422,11 +40430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalRotation.y
@@ -40438,7 +40446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 284022107973457131, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -40452,6 +40460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairZone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3439304637103513954, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 3563026155770092968, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: SuppliesToFix
       value: 
@@ -40459,7 +40471,7 @@ PrefabInstance:
     - target: {fileID: 7779656340625330016, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: deea341d91fd2d84a81e3a3318a31d6e, type: 2}
+      objectReference: {fileID: 2100000, guid: a1032ec90d06d7d48b76315e69e07d91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37eb9cc4a3f42cd48999dc23dcc44f00, type: 3}
 --- !u!1 &2135102805
