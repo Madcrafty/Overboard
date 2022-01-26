@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 283625dae6a979c438eac4df7b4e6cf4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OnHit: {fileID: 11400000, guid: 2790b22729a93ea439952860595cda7e, type: 2}
+  - holeBreachObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
