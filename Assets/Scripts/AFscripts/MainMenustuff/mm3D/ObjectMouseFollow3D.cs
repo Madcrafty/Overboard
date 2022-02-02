@@ -41,7 +41,7 @@ public class ObjectMouseFollow3D : MonoBehaviour
         {
             _objCanMove = false;
             _movementSpeed = _baseSpeed;
-            _bSplasheffects.SetActive(false);
+            //_bSplasheffects.SetActive(false);
         }
     }
     private void OnTriggerExit(Collider _other)
@@ -52,7 +52,7 @@ public class ObjectMouseFollow3D : MonoBehaviour
             
         }
         _objCanMove = true;
-        _bSplasheffects.SetActive(true);
+        //_bSplasheffects.SetActive(true);
     }
 }
 /*

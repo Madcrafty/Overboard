@@ -8,6 +8,7 @@ public class ObjCollision : MonoBehaviour
     [SerializeField] private bool _mainIsland, _secondaryIsland;
     [SerializeField] private int _colId;
     [SerializeField] private CollisionManager _manager;
+    [SerializeField] private Transform _dockPos;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +23,7 @@ public class ObjCollision : MonoBehaviour
                 _manager._receivedBool = _secondaryIsland;
             }
             _manager._recievedId = _colId;
+            _manager._moveToPos = _dockPos;
         }
     }
 }

@@ -8,6 +8,7 @@ public class CollisionManager : MonoBehaviour
 {
     public bool _receivedBool;
     public int _recievedId;
+    public Transform _moveToPos;
     // Start is called before the first frame update
     void Start()
     {

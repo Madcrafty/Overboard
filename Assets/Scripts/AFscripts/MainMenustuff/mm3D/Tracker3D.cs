@@ -11,7 +11,7 @@ public class Tracker3D : MonoBehaviour
     public bool _controllerUsed = false;
     [SerializeField]
     private Camera _cam;
-    private int _layerTarget = 1 << 11;
+    private int _layerTarget = 1 << 8;
 
 
     void Update()
